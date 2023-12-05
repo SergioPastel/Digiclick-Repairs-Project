@@ -13,23 +13,10 @@ namespace ProjetoReparacoes
 {
     public partial class Form1 : Form
     {
-        // Codigo da conexão a base de dados confiavel
-        static string str = "Server=localhost;Database=ReparacoesDB;Trusted_Connection=True;";
-        SqlConnection conn = new SqlConnection(str);
+        // Codigo da conexão a base de dados confiavel        
         public Form1()
         {
-            InitializeComponent();
-            // Tentar conectar a base de dados
-            try 
-            {
-                conn.Open();
-                MessageBox.Show("Conexão a Base de Dados estabelecida com sucesso!");
-                conn.Close();
-            } 
-            catch (SqlException ex) 
-            {
-                   MessageBox.Show(ex.Message);
-            }            
+            InitializeComponent();            
         }
 
         private void btnNovoItem_Click(object sender, EventArgs e)
