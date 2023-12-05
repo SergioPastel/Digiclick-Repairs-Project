@@ -55,10 +55,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAtivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAtivos.Designer.cs">
+      <DependentUpon>FrmAtivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConcluidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConcluidos.Designer.cs">
+      <DependentUpon>FrmConcluidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInserir.Designer.cs">
+      <DependentUpon>FrmInserir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAtivos.resx">
+      <DependentUpon>FrmAtivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConcluidos.resx">
+      <DependentUpon>FrmConcluidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInserir.resx">
+      <DependentUpon>FrmInserir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

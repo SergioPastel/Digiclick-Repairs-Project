@@ -23,3 +23,6 @@ C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoR
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.csproj.CopyComplete
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.FrmInserir.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.FrmAtivos.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.FrmConcluidos.resources

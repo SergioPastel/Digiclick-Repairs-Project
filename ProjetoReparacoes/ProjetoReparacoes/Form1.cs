@@ -32,10 +32,22 @@ namespace ProjetoReparacoes
             }            
         }
 
-        /*private void btnCriarTabelas_Click(object sender, EventArgs e)
+        private void btnNovoItem_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd;
-            string criarTbl = "CREATE TABLE"
-        }*/
+            Form frm = new frmInserir();
+            frm.ShowDialog();
+        }
+
+        private void btnAtivos_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmAtivos();
+            frm.ShowDialog();
+        }
+
+        private void btnConcluidos_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmConcluidos();
+            frm.ShowDialog();
+        }
     }
 }
