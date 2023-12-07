@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnNovoItem = new System.Windows.Forms.Button();
             this.btnAtivos = new System.Windows.Forms.Button();
             this.btnConcluidos = new System.Windows.Forms.Button();
@@ -71,10 +72,10 @@
             this.Controls.Add(this.btnConcluidos);
             this.Controls.Add(this.btnAtivos);
             this.Controls.Add(this.btnNovoItem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reparações - DIGICLICK";
             this.ResumeLayout(false);
