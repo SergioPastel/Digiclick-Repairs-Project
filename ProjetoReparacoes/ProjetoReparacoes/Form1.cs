@@ -12,13 +12,13 @@ using System.Data.SqlClient;
 namespace ProjetoReparacoes
 {
     public partial class Form1 : Form
-    {
-        // Codigo da conexão a base de dados confiavel        
+    {       
         public Form1()
         {
             InitializeComponent();            
         }
-
+        
+        // Codigo dos botões dos formularios
         private void btnNovoItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmInserir();

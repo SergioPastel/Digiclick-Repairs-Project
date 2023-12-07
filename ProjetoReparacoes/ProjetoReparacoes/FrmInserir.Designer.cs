@@ -35,17 +35,17 @@
             this.lblNumSerie = new System.Windows.Forms.Label();
             this.txtAvaria = new System.Windows.Forms.TextBox();
             this.lblAvaria = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblDataEntrada = new System.Windows.Forms.Label();
             this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
             this.txtContacto = new System.Windows.Forms.TextBox();
             this.lblContacto = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(12, 476);
+            this.btnInserir.Location = new System.Drawing.Point(12, 485);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(351, 85);
             this.btnInserir.TabIndex = 0;
@@ -107,14 +107,6 @@
             this.lblAvaria.TabIndex = 5;
             this.lblAvaria.Text = "Avaria:";
             // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(12, 215);
-            this.txtCliente.Multiline = true;
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(351, 20);
-            this.txtCliente.TabIndex = 8;
-            // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
@@ -147,6 +139,7 @@
             this.txtContacto.Location = new System.Drawing.Point(12, 275);
             this.txtContacto.Multiline = true;
             this.txtContacto.Name = "txtContacto";
+            this.txtContacto.ReadOnly = true;
             this.txtContacto.Size = new System.Drawing.Size(351, 20);
             this.txtContacto.TabIndex = 19;
             // 
@@ -160,16 +153,26 @@
             this.lblContacto.TabIndex = 18;
             this.lblContacto.Text = "Contacto:";
             // 
+            // cmbCliente
+            // 
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(12, 214);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(351, 21);
+            this.cmbCliente.TabIndex = 20;
+            this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
+            // 
             // frmInserir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 573);
+            this.ClientSize = new System.Drawing.Size(382, 577);
+            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.lblContacto);
             this.Controls.Add(this.dtpEntrada);
             this.Controls.Add(this.lblDataEntrada);
-            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtAvaria);
             this.Controls.Add(this.lblAvaria);
@@ -178,7 +181,10 @@
             this.Controls.Add(this.txtDenominacao);
             this.Controls.Add(this.lblDenominacao);
             this.Controls.Add(this.btnInserir);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmInserir";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir nova Reparação";
             this.ResumeLayout(false);
@@ -195,11 +201,11 @@
         private System.Windows.Forms.Label lblNumSerie;
         private System.Windows.Forms.TextBox txtAvaria;
         private System.Windows.Forms.Label lblAvaria;
-        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblDataEntrada;
         private System.Windows.Forms.DateTimePicker dtpEntrada;
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.Label lblContacto;
+        private System.Windows.Forms.ComboBox cmbCliente;
     }
 }

@@ -35,9 +35,9 @@
             // 
             // btnNovoItem
             // 
-            this.btnNovoItem.Location = new System.Drawing.Point(100, 27);
+            this.btnNovoItem.Location = new System.Drawing.Point(70, 30);
             this.btnNovoItem.Name = "btnNovoItem";
-            this.btnNovoItem.Size = new System.Drawing.Size(233, 77);
+            this.btnNovoItem.Size = new System.Drawing.Size(230, 75);
             this.btnNovoItem.TabIndex = 0;
             this.btnNovoItem.Text = "Inserir nova Reparação";
             this.btnNovoItem.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // btnAtivos
             // 
-            this.btnAtivos.Location = new System.Drawing.Point(100, 139);
+            this.btnAtivos.Location = new System.Drawing.Point(70, 130);
             this.btnAtivos.Name = "btnAtivos";
-            this.btnAtivos.Size = new System.Drawing.Size(233, 77);
+            this.btnAtivos.Size = new System.Drawing.Size(230, 75);
             this.btnAtivos.TabIndex = 1;
             this.btnAtivos.Text = "Reparações Ativas";
             this.btnAtivos.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // btnConcluidos
             // 
-            this.btnConcluidos.Location = new System.Drawing.Point(100, 250);
+            this.btnConcluidos.Location = new System.Drawing.Point(70, 228);
             this.btnConcluidos.Name = "btnConcluidos";
-            this.btnConcluidos.Size = new System.Drawing.Size(233, 77);
+            this.btnConcluidos.Size = new System.Drawing.Size(230, 75);
             this.btnConcluidos.TabIndex = 2;
             this.btnConcluidos.Text = "Reparações Concluidas";
             this.btnConcluidos.UseVisualStyleBackColor = true;
@@ -67,13 +67,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 356);
+            this.ClientSize = new System.Drawing.Size(369, 331);
             this.Controls.Add(this.btnConcluidos);
             this.Controls.Add(this.btnAtivos);
             this.Controls.Add(this.btnNovoItem);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Reparações - DIGICLICK";
             this.ResumeLayout(false);
 
         }
