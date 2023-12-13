@@ -1,3 +1,5 @@
+SET DATEFORMAT ymd;
+
 /*create table ReparosAtivos 
 (
 	id int NOT NULL Identity (1,1),
@@ -6,7 +8,7 @@
 	avaria varchar(200),
 	idCliente int NOT NULL FOREIGN KEY REFERENCES Clientes(id),
 	contacto varchar(30),
-	dtEntrada datetime,
+	dtEntrada date,
 	primary key(id)
 );*/
 
@@ -19,11 +21,11 @@
 	avaria varchar(200),
 	idCliente int NOT NULL,
 	contacto varchar(20),
-	dtEntrada datetime,
-	dtReparacao datetime,
-	dtEntrega datetime,
-	precoSiva smallmoney,
-	precoIva smallmoney,
+	dtEntrada date,
+	dtReparacao date,
+	dtEntrega date,
+	terceirizado bit NOT NULL,
+	reparador varchar(30),
 	primary key(id)
 ); 
 
@@ -36,7 +38,7 @@ create table Clientes
 );*/
 
 
-/*drop table ReparosAtivos
+/*drop table ReparosAtivos;
 
 drop table ReparosConcluidos */
 
@@ -53,6 +55,7 @@ VALUES
 ('Foz Cabedelo','258325107')*/
 
 /*truncate table ReparosAtivos;
+truncate table ReparosConcluidos;
 
 DELETE FROM Clientes WHERE id = 4;
 
@@ -61,3 +64,5 @@ DBCC CHECKIDENT('Clientes', RESEED, 3);*/
 /*INSERT INTO Clientes
 VALUES
 ('Teste', '111111111')*/
+
+SELECT * FROM Clientes WHERE id = 2

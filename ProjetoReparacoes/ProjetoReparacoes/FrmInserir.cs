@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace ProjetoReparacoes
 {
     public partial class frmInserir : Form
     {
-        // Codigo da conexão da basede dados
+        // Codigo da conexão da base de dados
         const string str = "Server=localhost;Database=ReparacoesDB;Trusted_Connection=True;";
         SqlConnection conn = new SqlConnection(str);
         // List de clientes que vai ser usada para conseguir o contacto
@@ -102,9 +103,9 @@ namespace ProjetoReparacoes
                                  "'" + txtNumSerie.Text + "'," +
                                  "'" + txtAvaria.Text + "'," +
                                  c.id + "," +
-                                 "'" + c.contacto + "'," +
-                                 "'" + dtpEntrada.Value.ToString("dd-MM-yy") +
-                                 "')";                    
+                                 "'" + c.contacto + "','" +
+                                 dtpEntrada.Value.ToString(CultureInfo.InvariantCulture).Substring(0, 10) +
+                                 "')";
                     cmd = new SqlCommand(qry, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Inserção finalizada com sucesso!");                    
@@ -129,7 +130,7 @@ namespace ProjetoReparacoes
             txtContacto.Text = "";
             txtAvaria.Text = "";
             cmbCliente.SelectedIndex = 0;
-            dtpEntrada.Text = "";
+            dtpEntrada.Value = DateTime.Now;
             txtDenominacao.Focus();
         }
 

@@ -33,5 +33,31 @@ namespace ProjetoReparacoes
             }           
             return Clientes;
         }
+
+        public Cliente getClientWhere(SqlConnection conn, int id)
+        {
+            Cliente c = new Cliente();
+
+            string qry = "SELECT * FROM Clientes WHERE id = " + id + ";";
+            SqlCommand cmd = new SqlCommand(qry, conn);
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            while (leitor.Read())
+            {
+                c.id = (int)leitor["id"];
+                c.nome = (string)leitor["nome"];
+                c.contacto = (string)leitor["contacto"];
+            }           
+            return c;
+        }
+
+        public int getClientByName (SqlConnection conn, string name) 
+        {
+            string qry = "SELECT id FROM Clientes WHERE nome = '" + name + "';";
+            SqlCommand cmd = new SqlCommand(qry, conn);
+            int id = (int)cmd.ExecuteScalar();
+
+            return id;
+        }
     }
 }
