@@ -1,5 +1,3 @@
-SET DATEFORMAT ymd;
-
 /*create table ReparosAtivos 
 (
 	id int NOT NULL Identity (1,1),

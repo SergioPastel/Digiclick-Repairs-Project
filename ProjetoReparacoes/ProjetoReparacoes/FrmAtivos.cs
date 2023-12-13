@@ -39,10 +39,10 @@ namespace ProjetoReparacoes
                 {
                     reparos.Add(r);
                     ReparosLst.Add(r.id, r.descricao);                    
-                }
-                lstReparos.DataSource = new BindingSource(ReparosLst, null);
+                }                
                 lstReparos.ValueMember = "Key";
                 lstReparos.DisplayMember = "Value";
+                lstReparos.DataSource = new BindingSource(ReparosLst, null);
                 Console.WriteLine(lstReparos.SelectedValue);
             }
             catch (SqlException ex)
