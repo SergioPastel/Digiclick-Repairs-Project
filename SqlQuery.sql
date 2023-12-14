@@ -1,3 +1,6 @@
+/*if not exists create database ReparacoesDB
+using ReparacoesDB*/
+
 /*create table ReparosAtivos 
 (
 	id int NOT NULL Identity (1,1),
@@ -8,10 +11,10 @@
 	contacto varchar(30),
 	dtEntrada date,
 	primary key(id)
-);*/
+);
 
 
-/*create table ReparosConcluidos 
+create table ReparosConcluidos 
 (
 	id int NOT NULL,
 	descricao varchar(30),
@@ -63,4 +66,4 @@ DBCC CHECKIDENT('Clientes', RESEED, 3);*/
 VALUES
 ('Teste', '111111111')*/
 
-SELECT * FROM Clientes WHERE id = 2
+--SELECT * FROM Clientes WHERE id = 2

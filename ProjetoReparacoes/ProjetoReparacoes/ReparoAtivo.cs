@@ -21,7 +21,8 @@ namespace ProjetoReparacoes
         public string contacto;
         public DateTime dtEntrega;
 
-        //metodos
+        // Metodos
+        // Recebe uma lista com todos os reparos ativos
         public List<ReparoAtivo> getReparos(SqlConnection conn)
         {
             List<ReparoAtivo> Reparos = new List<ReparoAtivo>();
@@ -47,6 +48,7 @@ namespace ProjetoReparacoes
             return Reparos;
         }
 
+        // Recebe um reparo de id especifico
         public ReparoAtivo getReparosWhere(SqlConnection conn, int id)
         {
             ReparoAtivo r = new ReparoAtivo();
@@ -71,6 +73,7 @@ namespace ProjetoReparacoes
             return r;
         }
 
+        // Atualiza o reparo de id especifico
         public void updateReparos(SqlConnection conn, int id, string desc, string num, string ava)
         {
             string qry = "UPDATE ReparosAtivos SET descricao ='" + desc + "', numSerie = '" + num + "', avaria = '" + ava + 
@@ -79,6 +82,7 @@ namespace ProjetoReparacoes
             cmd.ExecuteNonQuery();
         }
 
+        // Remove o reparo da tabela ReparosAtivos, e o adiciona a tabela ReparosConcluidos
         public void concluirReparo(SqlConnection conn, ReparoAtivo r, DateTime dt, DateTime dtReparo, DateTime dtEntregaCliente, int terceirizado, string reparador)
         {
             if (r.cliente == null)
@@ -105,6 +109,21 @@ namespace ProjetoReparacoes
 
                 qry = "DELETE from ReparosAtivos WHERE id=" + r.id + ";";
                 cmd = new SqlCommand(qry, conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        // Elimina o reparo da tabela reparos ativos
+        public void deletarReparo(SqlConnection conn, ReparoAtivo r)
+        {
+            if (r.cliente == null)
+            {
+                MessageBox.Show("Selecione um reparo valido");
+            }
+            else
+            {
+                string qry = "DELETE FROM ReparosAtivos WHERE id=" + r.id;
+                SqlCommand cmd = new SqlCommand(qry, conn);
                 cmd.ExecuteNonQuery();
             }
         }

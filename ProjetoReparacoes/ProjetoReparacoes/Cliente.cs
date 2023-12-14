@@ -14,7 +14,8 @@ namespace ProjetoReparacoes
         public string nome;
         public string contacto;
 
-        //metodos
+        // Metodos
+        // Recebe uma lista com todos os clientes
         public List<Cliente> getClients(SqlConnection conn)
         {
             List<Cliente> Clientes = new List<Cliente>();
@@ -34,6 +35,7 @@ namespace ProjetoReparacoes
             return Clientes;
         }
 
+        // Recebe o cliente com um id especifico
         public Cliente getClientWhere(SqlConnection conn, int id)
         {
             Cliente c = new Cliente();
@@ -51,6 +53,7 @@ namespace ProjetoReparacoes
             return c;
         }
 
+        // Recebe o id de um cliente com um nome especifico(Clientes não podem ter o mesmo nome)
         public int getClientByName (SqlConnection conn, string name) 
         {
             string qry = "SELECT id FROM Clientes WHERE nome = '" + name + "';";
