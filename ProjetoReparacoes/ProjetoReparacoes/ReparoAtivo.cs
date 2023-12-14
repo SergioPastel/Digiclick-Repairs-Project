@@ -67,7 +67,6 @@ namespace ProjetoReparacoes
                 r.cliente = c.getClientWhere(conn, (int)leitor["idCliente"]);
                 r.contacto = (string)leitor["contacto"];
                 r.dtEntrega = (DateTime)leitor["dtEntrada"];
-                Console.WriteLine(r);
             }
 
             return r;
@@ -85,13 +84,7 @@ namespace ProjetoReparacoes
         // Remove o reparo da tabela ReparosAtivos, e o adiciona a tabela ReparosConcluidos
         public void concluirReparo(SqlConnection conn, ReparoAtivo r, DateTime dt, DateTime dtReparo, DateTime dtEntregaCliente, int terceirizado, string reparador)
         {
-            if (r.cliente == null)
-            {
-                MessageBox.Show("Selecione um reparo valido");
-            }
-            else
-            {
-                string qry = "INSERT into ReparosConcluidos VALUES(" +
+            string qry = "INSERT into ReparosConcluidos VALUES(" +
                       r.id + ",'" +
                       r.descricao + "','" +
                       r.numSerie + "','" +
@@ -103,14 +96,12 @@ namespace ProjetoReparacoes
                       dtEntregaCliente.ToString(CultureInfo.InvariantCulture).Substring(0, 10) + "'," +
                       terceirizado + ",'" +
                       reparador + "');";
-                Console.WriteLine(qry);
-                SqlCommand cmd = new SqlCommand(qry, conn);
-                cmd.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand(qry, conn);
+            cmd.ExecuteNonQuery();
 
-                qry = "DELETE from ReparosAtivos WHERE id=" + r.id + ";";
-                cmd = new SqlCommand(qry, conn);
-                cmd.ExecuteNonQuery();
-            }
+            qry = "DELETE from ReparosAtivos WHERE id=" + r.id + ";";
+            cmd = new SqlCommand(qry, conn);
+            cmd.ExecuteNonQuery();
         }
 
         // Elimina o reparo da tabela reparos ativos

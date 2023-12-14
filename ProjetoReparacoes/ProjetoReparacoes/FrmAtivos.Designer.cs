@@ -68,7 +68,7 @@
             // 
             this.txtDescricao.Location = new System.Drawing.Point(319, 70);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(301, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(300, 20);
             this.txtDescricao.TabIndex = 2;
             // 
             // btnConcluirEditar
@@ -105,7 +105,7 @@
             // 
             this.txtNumSerie.Location = new System.Drawing.Point(319, 140);
             this.txtNumSerie.Name = "txtNumSerie";
-            this.txtNumSerie.Size = new System.Drawing.Size(301, 20);
+            this.txtNumSerie.Size = new System.Drawing.Size(300, 20);
             this.txtNumSerie.TabIndex = 5;
             // 
             // lblCliente
@@ -123,7 +123,7 @@
             this.txtCliente.Location = new System.Drawing.Point(319, 210);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(301, 20);
+            this.txtCliente.Size = new System.Drawing.Size(300, 20);
             this.txtCliente.TabIndex = 7;
             // 
             // lblContacto
@@ -141,7 +141,7 @@
             this.txtContacto.Location = new System.Drawing.Point(319, 280);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.ReadOnly = true;
-            this.txtContacto.Size = new System.Drawing.Size(301, 20);
+            this.txtContacto.Size = new System.Drawing.Size(300, 20);
             this.txtContacto.TabIndex = 9;
             // 
             // lblDataEntrada
@@ -169,7 +169,7 @@
             this.txtAvaria.Location = new System.Drawing.Point(319, 420);
             this.txtAvaria.Multiline = true;
             this.txtAvaria.Name = "txtAvaria";
-            this.txtAvaria.Size = new System.Drawing.Size(301, 103);
+            this.txtAvaria.Size = new System.Drawing.Size(300, 103);
             this.txtAvaria.TabIndex = 13;
             // 
             // lblId
@@ -190,7 +190,7 @@
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(25, 25);
+            this.txtId.Size = new System.Drawing.Size(50, 25);
             this.txtId.TabIndex = 15;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -210,7 +210,7 @@
             this.txtDtEntrada.Location = new System.Drawing.Point(319, 350);
             this.txtDtEntrada.Name = "txtDtEntrada";
             this.txtDtEntrada.ReadOnly = true;
-            this.txtDtEntrada.Size = new System.Drawing.Size(301, 20);
+            this.txtDtEntrada.Size = new System.Drawing.Size(300, 20);
             this.txtDtEntrada.TabIndex = 19;
             // 
             // dtpReparo
@@ -235,7 +235,7 @@
             // 
             this.txtReparador.Location = new System.Drawing.Point(319, 676);
             this.txtReparador.Name = "txtReparador";
-            this.txtReparador.Size = new System.Drawing.Size(301, 20);
+            this.txtReparador.Size = new System.Drawing.Size(300, 20);
             this.txtReparador.TabIndex = 23;
             // 
             // dtpEntrega
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 709);
+            this.ClientSize = new System.Drawing.Size(644, 711);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblReparador);
             this.Controls.Add(this.lblDtEntrega);
@@ -315,6 +315,8 @@
             this.Controls.Add(this.btnConcluirEditar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lstReparos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAtivos";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
