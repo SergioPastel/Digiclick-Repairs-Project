@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInserir));
             this.btnInserir = new System.Windows.Forms.Button();
             this.lblDenominacao = new System.Windows.Forms.Label();
             this.txtDenominacao = new System.Windows.Forms.TextBox();
@@ -66,6 +67,7 @@
             // txtDenominacao
             // 
             this.txtDenominacao.Location = new System.Drawing.Point(12, 35);
+            this.txtDenominacao.MaxLength = 30;
             this.txtDenominacao.Multiline = true;
             this.txtDenominacao.Name = "txtDenominacao";
             this.txtDenominacao.Size = new System.Drawing.Size(351, 20);
@@ -74,6 +76,7 @@
             // txtNumSerie
             // 
             this.txtNumSerie.Location = new System.Drawing.Point(12, 95);
+            this.txtNumSerie.MaxLength = 30;
             this.txtNumSerie.Multiline = true;
             this.txtNumSerie.Name = "txtNumSerie";
             this.txtNumSerie.Size = new System.Drawing.Size(351, 20);
@@ -92,6 +95,7 @@
             // txtAvaria
             // 
             this.txtAvaria.Location = new System.Drawing.Point(12, 335);
+            this.txtAvaria.MaxLength = 500;
             this.txtAvaria.Multiline = true;
             this.txtAvaria.Name = "txtAvaria";
             this.txtAvaria.Size = new System.Drawing.Size(351, 135);
@@ -137,6 +141,7 @@
             // txtContacto
             // 
             this.txtContacto.Location = new System.Drawing.Point(12, 275);
+            this.txtContacto.MaxLength = 30;
             this.txtContacto.Multiline = true;
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.ReadOnly = true;
@@ -158,6 +163,7 @@
             this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(12, 214);
+            this.cmbCliente.MaxLength = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(351, 21);
             this.cmbCliente.TabIndex = 20;
@@ -181,6 +187,7 @@
             this.Controls.Add(this.txtDenominacao);
             this.Controls.Add(this.lblDenominacao);
             this.Controls.Add(this.btnInserir);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInserir";

@@ -81,7 +81,7 @@ namespace ProjetoReparacoes
                     string qry = null;
                     SqlCommand cmd = new SqlCommand(qry, conn);                    
                     if (cmbCliente.SelectedIndex == -1)
-                    {
+                    {                                                
                         // Adiciona o ultimo id da combobox para o novo cliente, o adiciona pra lista e dictionary,
                         // Re-adiciona o dictionary como datasource pra atualizar a combobox automaticamente
                         // Executa a querry e adiciona o novo cliente a base de dados
@@ -94,9 +94,8 @@ namespace ProjetoReparacoes
                                  "'" + c.contacto + "');";
 
                         cmd = new SqlCommand(qry, conn);
-                        cmd.ExecuteNonQuery();
-                        
-                    }
+                        cmd.ExecuteNonQuery();                        
+                    }                    
                     // Atualiza a querry e adiciona a reparação a base de dados, também podendo escolher novos clientes
                     qry = "INSERT INTO ReparosAtivos VALUES(" +
                                  "'" + txtDenominacao.Text + "'," +

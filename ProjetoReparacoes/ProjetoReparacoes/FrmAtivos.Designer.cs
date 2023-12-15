@@ -71,6 +71,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(319, 70);
+            this.txtDescricao.MaxLength = 30;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(300, 20);
             this.txtDescricao.TabIndex = 2;
@@ -108,6 +109,7 @@
             // txtNumSerie
             // 
             this.txtNumSerie.Location = new System.Drawing.Point(319, 140);
+            this.txtNumSerie.MaxLength = 30;
             this.txtNumSerie.Name = "txtNumSerie";
             this.txtNumSerie.Size = new System.Drawing.Size(300, 20);
             this.txtNumSerie.TabIndex = 5;
@@ -171,6 +173,7 @@
             // txtAvaria
             // 
             this.txtAvaria.Location = new System.Drawing.Point(319, 420);
+            this.txtAvaria.MaxLength = 500;
             this.txtAvaria.Multiline = true;
             this.txtAvaria.Name = "txtAvaria";
             this.txtAvaria.Size = new System.Drawing.Size(300, 103);
@@ -238,6 +241,7 @@
             // txtReparador
             // 
             this.txtReparador.Location = new System.Drawing.Point(319, 676);
+            this.txtReparador.MaxLength = 30;
             this.txtReparador.Name = "txtReparador";
             this.txtReparador.Size = new System.Drawing.Size(300, 20);
             this.txtReparador.TabIndex = 23;
@@ -346,6 +350,7 @@
             this.Controls.Add(this.btnConcluirEditar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lstReparos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAtivos";

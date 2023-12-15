@@ -290,31 +290,56 @@ namespace ProjetoReparacoes
         // Funções de impressão do Reparo
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+            printPreviewDialog1.ClientSize = new Size(700, 700);
             try
             {
                 if(conn.State == ConnectionState.Closed)
                     conn.Open();
                 ReparoAtivo r = new ReparoAtivo().getReparosWhere(conn, (int)lstReparos.SelectedValue);
 
-                using (Font font1 = new Font("Arial", 20, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point))
-                {
-                    //O string format serve para formatar strings
-                    //quanto a seu alinhamento e o proprio alinhamento da linha
-                    StringFormat sf = new StringFormat();
+                Font font1 = new Font("Arial", 36, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+                Font font2 = new Font("Arial", 24, FontStyle.Regular, GraphicsUnit.Point);
 
-                    sf.Alignment = StringAlignment.Center;
+                //O string format serve para formatar strings
+                //quanto a seu alinhamento e o proprio alinhamento da linha
+                StringFormat sf = new StringFormat();
 
-                    SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+                sf.Alignment = StringAlignment.Center;
 
-                    //Captura todo o retângulo dos limites da página
-                    System.Drawing.RectangleF rect = e.PageBounds;
+                SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
 
-                    //Aumenta a coordenada de localização Y
-                    rect.Y += 50;
+                //Captura todo o retângulo dos limites da página
+                System.Drawing.RectangleF rect = e.PageBounds;
 
-                    //Desenhar texto centralizado
-                    e.Graphics.DrawString(r.id + " - " + r.descricao + "(" + r.cliente.nome + ")", font1, drawBrush, rect, sf);
-                }              
+                //Aumenta a coordenada de localização Y
+                rect.Y += 50;
+
+                //Desenhar os textos centralizado
+                e.Graphics.DrawString(r.id + " - " + r.descricao + "(" + r.cliente.nome + ")", font1, drawBrush, rect, sf);
+
+                rect.Y += 200;
+
+                if (r.numSerie == "")
+                    e.Graphics.DrawString("Nº de Serie: Não foi inserido.", font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+                else
+                    e.Graphics.DrawString("Nº de Serie: " + r.numSerie, font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+
+                rect.Y += 200;
+
+                if (r.cliente.contacto == "")
+                    e.Graphics.DrawString("Contacto do Cliente: Não foi inserido.", font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+                else
+                    e.Graphics.DrawString("Contacto do Cliente: " + r.cliente.contacto, font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+
+                rect.Y += 200;
+
+                if (r.avaria == "")
+                    e.Graphics.DrawString("Avaria: Não foi inserida.", font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+                else
+                    e.Graphics.DrawString("Avaria:\n".ToString() + r.avaria, font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
+
+                rect.Y += 448;
+                e.Graphics.DrawString("Data de Entrada: " + r.dtEntrega.ToString().Substring(0, 10), font2, drawBrush, new RectangleF(rect.X, rect.Y, rect.Width, rect.Height), sf);
 
             }      
             catch (SqlException ex)
@@ -330,9 +355,11 @@ namespace ProjetoReparacoes
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("a4", 595, 842);
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
                 printDocument1.Print();
+                MessageBox.Show("Reparo impresso com sucesso!");
+            }
         }
     }   
 }
