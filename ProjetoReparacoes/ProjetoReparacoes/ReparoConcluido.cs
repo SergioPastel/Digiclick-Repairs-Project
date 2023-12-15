@@ -56,7 +56,7 @@ namespace ProjetoReparacoes
             return Reparos;
         }
 
-        // Insere o reparo concluido na tabela reparos ativos
+        // Insere o reparo concluido na tabela reparos ativos, o removendo da tabela reparos concluidos
         public void reabrirReparo(SqlConnection conn, ReparoConcluido r)
         {
             string qry = "SET IDENTITY_INSERT ReparosAtivos ON; INSERT into ReparosAtivos(id,descricao,numSerie,avaria,idCLiente," +
@@ -67,7 +67,7 @@ namespace ProjetoReparacoes
                          r.avaria + "'," +
                          r.cliente.id + ",'" +
                          r.cliente.contacto + "','" +
-                         r.dtEntrega + "');" + "SET IDENTITY_INSERT ReparosAtivos OFF;";
+                         r.dtEntrega.ToString("yyyy-MM-dd") + "');" + "SET IDENTITY_INSERT ReparosAtivos OFF;";
             SqlCommand cmd = new SqlCommand(qry, conn);
             cmd.ExecuteNonQuery();
 
@@ -104,6 +104,7 @@ namespace ProjetoReparacoes
             return r;
         }
 
+        // Deleta o reparo da tabela concluidos
         public void deletarReparo(SqlConnection conn, ReparoConcluido r)
         {
             if (r.cliente == null)

@@ -53,6 +53,7 @@
             this.lblDtEntrega = new System.Windows.Forms.Label();
             this.lblReparador = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstReparos
@@ -285,11 +286,21 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(429, 10);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(190, 25);
+            this.btnImprimir.TabIndex = 29;
+            this.btnImprimir.Text = "Imprimir Reparação";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            // 
             // FrmAtivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 711);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblReparador);
             this.Controls.Add(this.lblDtEntrega);
@@ -353,5 +364,6 @@
         private System.Windows.Forms.Label lblDtEntrega;
         private System.Windows.Forms.Label lblReparador;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -192,6 +192,7 @@ namespace ProjetoReparacoes
 
                     // Usa a função concluir reparo para remover o reparo da tabela ReparosAtivos e adiciona-lo a ReparosConcluidos
                     // Remove reparo do dictionary e atualiza a lista
+                    r.updateReparos(conn, reparoId, txtDescricao.Text, txtNumSerie.Text, txtAvaria.Text);
                     r.concluirReparo(conn, r.getReparosWhere(conn, int.Parse(txtId.Text)), DateTime.Parse(txtDtEntrada.Text), dtpReparo.Value, dtpEntrega.Value, trueOrFalse, txtReparador.Text);
                     ReparosLst.Remove(reparoId);
                     lstReparos.DataSource = new BindingSource(ReparosLst, null);

@@ -71,8 +71,8 @@ VALUES
 
 SET IDENTITY_INSERT ReparosAtivos ON;
 
-INSERT INTO ReparosAtivos(id,descricao,numSerie,avaria,idCliente,contacto,dtEntrada)
+INSERT INTO ReparosAtivos
 VALUES
-(11,'Teste', '111', 'teste', 1, 'teste', '2022-12-13');
+('Teste', '111', 'teste', 1, 'teste', '2022-12-13');
 
 SET IDENTITY_INSERT ReparosAtivos OFF;

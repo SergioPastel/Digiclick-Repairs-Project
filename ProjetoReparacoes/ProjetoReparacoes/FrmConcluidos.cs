@@ -22,7 +22,6 @@ namespace ProjetoReparacoes
         public FrmConcluidos()
         {
             InitializeComponent();
-            // Limpa as caixas de inicio para esconder as caixas do checkbox
             try
             {
                 // Abre a conexão e cria um novo reparo para usar o metodo getReparos
@@ -61,7 +60,7 @@ namespace ProjetoReparacoes
 
         private void lstReparos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Se o dictionary estiver vazio esconde os botões e limpa as caixas, return impede a função de prosseguir
+            // Se o dictionary estiver vazio esconde os botões, return impede a função de prosseguir
             if (ReparosLst.Count == 0)
             {
                 btnReabrir.Hide();
@@ -94,7 +93,8 @@ namespace ProjetoReparacoes
                 txtContacto.Text = r.cliente.contacto;
                 txtDtEntrada.Text = r.dtEntrega.ToString().Substring(0, 10);
                 txtDtReparo.Text = r.dtReparo.ToString().Substring(0, 10);
-                txtDtEntrega.Text = r.dtReparo.ToString().Substring(0, 10);
+                txtDtEntrega.Text = r.dtEntregaCliente.ToString().Substring(0, 10);
+                // Se o reparo não for terceirizado, o reparador é a Digiclick, se for o Reparador tem o nome inserido
                 if(r.terceirizado == false)                
                     txtReparador.Text = "Digiclick";
                 else
@@ -160,14 +160,16 @@ namespace ProjetoReparacoes
             // Declara o Id do reparo que vai ser usado, a este é atribuido o valor selecionado na listbox
             int reparoId = (int)lstReparos.SelectedValue;
 
+            // Cria um novo cliente com os dados do cliente do reparo 
             Cliente c = new Cliente();
             try
             {
                 conn.Open();
                 ReparoConcluido r = new ReparoConcluido();
+                r = r.getReparosWhere(conn, reparoId);
                 r.cliente = c.getClientWhere(conn, c.getClientByName(conn, txtCliente.Text));                
 
-                // Usa a função concluir reparo para remover o reparo da tabela ReparosAtivos e adiciona-lo a ReparosConcluidos
+                // Usa a função concluir reparo para remover o reparo da tabela ReparosConcluidos e adiciona-lo a ReparosAtivos
                 // Remove reparo do dictionary e atualiza a lista
                 r.reabrirReparo(conn, r);
                 ReparosLst.Remove(reparoId);
