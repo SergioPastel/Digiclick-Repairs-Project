@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ProjetoReparacoes.exe" version="1.0.0.0" publicKeyToken="6be638704b8cbb95" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="logo-small_1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ProjetoReparacoes" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ProjetoReparacoes.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjetoReparacoes.exe" size="705568">
+      <assemblyIdentity name="ProjetoReparacoes" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>N8GcGIoggrJOs2pns5/IIwTAoMAYoJHLh2t0tnVBnKs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SqlClient.dll" size="223680">
+      <assemblyIdentity name="System.Data.SqlClient" version="4.6.1.5" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XLvfIimXAlWFdcEKgwZWiG94bzxc30Ncu2nhtbMxvBM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="logo-small_1.ico" size="130334">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qcryNvr4IUEVCULSjaJ5IiAwtLjZi2nwLnpDYLKYcho=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ProjetoReparacoes.exe.config" size="946">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d5Rtwxlo+RTxqq/ceETL9kdXqclCs51dGNQFVP0Qjoc=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-4QA400G\Digiclick-Frente" issuerKeyHash="7125c76b6c892db8296d69924fc23681f8f325db" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>khZKVtxHnifwyvLryR6hGue94IUW/9NArQJVzfnIFCs=</DigestValue></Reference></SignedInfo><SignatureValue>GoYf4gozcqgQMmlI8BYz6nwKFKF+2H10A5x4qtdRf/9k18ZjwHXQ58ug3e6FnIyWMVcdjZvkE5LFkVWT7oI6amN052pmZ1JUbNIBVdWEp/Zgzb6MjUubdc0xhE1k+zht6/EFCM0WTQkR4U3r5bgPkrWGZxnSQvO74Ppyg4k1AwE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tEoyMGbpD0qYG0Ttodquek5C+w+PbL5gIQeVwzn6AYJQrgg/F+bGj1Vl1ImPQKFPeHXxYjZpAz79RqWaO1dnLFb+qFt3mvC6XkOYAgTp67IXorIfPijCnqV5mqXlceFCKj6gRuknwPsd4E15dl8F11yOkd8+DJfHvZpw5BHyRok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2b14c8f9cd5502ad40d3ff1685e0bde71aa11ec9ebf2caf0279e47dc564a1692" Description="" Url=""><as:assemblyIdentity name="ProjetoReparacoes.exe" version="1.0.0.0" publicKeyToken="6be638704b8cbb95" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-4QA400G\Digiclick-Frente</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>iGSVs8MbgkOz9lLAIFCyxlBb2/FAqdD7/S9YzaUA9PQ=</DigestValue></Reference></SignedInfo><SignatureValue>NuOv1TT73v6HqvaTPnaW42Ixx7XBwHni/xhXrd2uDdkHC/Wh6i7IjzA86nnX+PcXY5FjWJg2F2/0KQtpJOp5Doyr1S6BAvXNvnGkaNMRi2a6+bO+4Wpqcvm/+9CZbhoekaD3RTqLiiLRgCmXmTCnS31XY/zrXnZTzpVoUucYNd0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tEoyMGbpD0qYG0Ttodquek5C+w+PbL5gIQeVwzn6AYJQrgg/F+bGj1Vl1ImPQKFPeHXxYjZpAz79RqWaO1dnLFb+qFt3mvC6XkOYAgTp67IXorIfPijCnqV5mqXlceFCKj6gRuknwPsd4E15dl8F11yOkd8+DJfHvZpw5BHyRok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICGTCCAYKgAwIBAgIQP+BkosBHGKVB0S5t4O2K+jANBgkqhkiG9w0BAQsFADBLMUkwRwYDVQQDHkAARABFAFMASwBUAE8AUAAtADQAUQBBADQAMAAwAEcAXABEAGkAZwBpAGMAbABpAGMAawAtAEYAcgBlAG4AdABlMB4XDTIzMTIxNTE4NDMyN1oXDTI0MTIxNTAwNDMyN1owSzFJMEcGA1UEAx5AAEQARQBTAEsAVABPAFAALQA0AFEAQQA0ADAAMABHAFwARABpAGcAaQBjAGwAaQBjAGsALQBGAHIAZQBuAHQAZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAtEoyMGbpD0qYG0Ttodquek5C+w+PbL5gIQeVwzn6AYJQrgg/F+bGj1Vl1ImPQKFPeHXxYjZpAz79RqWaO1dnLFb+qFt3mvC6XkOYAgTp67IXorIfPijCnqV5mqXlceFCKj6gRuknwPsd4E15dl8F11yOkd8+DJfHvZpw5BHyRokCAwEAATANBgkqhkiG9w0BAQsFAAOBgQB2xzPvowYwXfDvg5eq1OlwcV5t4w332XH0TDXowHPGbAK3YcflsfcAzqE0KPV0GesDU5Deu9qbmK1hKduJzmSPzfUBcb3tDBpDwOPLBMxfxT1P06otLFN6PG69v5UiZGKoaT7eCXdcrbduqpRXuZ/7qn//7kR/SGvQIEscyWWKyA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -14,3 +14,7 @@ C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoR
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.csproj.CopyComplete
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.exe
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.pdb
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\ProjetoReparacoes.exe.manifest
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\ProjetoReparacoes.application
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.exe.manifest
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.application
