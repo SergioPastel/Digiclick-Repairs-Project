@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,6 +69,7 @@ namespace ProjetoReparacoes
             {
                 btnConcluirEditar.Hide();
                 btnEliminar.Hide();
+                btnImprimir.Hide();
                 ClearBoxes();
                 return;
             }
@@ -212,6 +215,7 @@ namespace ProjetoReparacoes
                         lstReparos.DataSource = null;
                         btnConcluirEditar.Hide();
                         btnEliminar.Hide();
+                        btnImprimir.Hide();
                         ClearBoxes();
                     }
                     chbFinalizado.CheckState = CheckState.Unchecked;
@@ -273,6 +277,7 @@ namespace ProjetoReparacoes
                     lstReparos.DataSource = null;
                     btnConcluirEditar.Hide();
                     btnEliminar.Hide();
+                    btnImprimir.Hide();
                     ClearBoxes();
                 }
                 chbFinalizado.CheckState = CheckState.Unchecked;
@@ -280,6 +285,54 @@ namespace ProjetoReparacoes
                 txtReparador.Text = "";
                 conn.Close();
             }
+        }
+
+        // Funções de impressão do Reparo
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            try
+            {
+                if(conn.State == ConnectionState.Closed)
+                    conn.Open();
+                ReparoAtivo r = new ReparoAtivo().getReparosWhere(conn, (int)lstReparos.SelectedValue);
+
+                using (Font font1 = new Font("Arial", 20, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point))
+                {
+                    //O string format serve para formatar strings
+                    //quanto a seu alinhamento e o proprio alinhamento da linha
+                    StringFormat sf = new StringFormat();
+
+                    sf.Alignment = StringAlignment.Center;
+
+                    SolidBrush drawBrush = new SolidBrush(System.Drawing.Color.Black);
+
+                    //Captura todo o retângulo dos limites da página
+                    System.Drawing.RectangleF rect = e.PageBounds;
+
+                    //Aumenta a coordenada de localização Y
+                    rect.Y += 50;
+
+                    //Desenhar texto centralizado
+                    e.Graphics.DrawString(r.id + " - " + r.descricao + "(" + r.cliente.nome + ")", font1, drawBrush, rect, sf);
+                }              
+
+            }      
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("a4", 595, 842);
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                printDocument1.Print();
         }
     }   
 }
