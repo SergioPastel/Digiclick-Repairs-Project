@@ -1,0 +1,16 @@
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\ProjetoReparacoes.exe.config
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\ProjetoReparacoes.exe
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\ProjetoReparacoes.pdb
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\System.Data.SqlClient.dll
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Release\System.Data.SqlClient.xml
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.csproj.AssemblyReference.cache
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.Form1.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.FrmAtivos.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.FrmConcluidos.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.frmInserir.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.Properties.Resources.resources
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.csproj.GenerateResource.cache
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.csproj.CoreCompileInputs.cache
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.csproj.CopyComplete
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.exe
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Release\ProjetoReparacoes.pdb
