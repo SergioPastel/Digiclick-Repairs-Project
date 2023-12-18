@@ -74,14 +74,14 @@
             this.txtDescricao.MaxLength = 30;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(300, 20);
-            this.txtDescricao.TabIndex = 2;
+            this.txtDescricao.TabIndex = 1;
             // 
             // btnConcluirEditar
             // 
             this.btnConcluirEditar.Location = new System.Drawing.Point(12, 529);
             this.btnConcluirEditar.Name = "btnConcluirEditar";
             this.btnConcluirEditar.Size = new System.Drawing.Size(289, 73);
-            this.btnConcluirEditar.TabIndex = 3;
+            this.btnConcluirEditar.TabIndex = 9;
             this.btnConcluirEditar.Text = "Editar Reparação";
             this.btnConcluirEditar.UseVisualStyleBackColor = true;
             this.btnConcluirEditar.Click += new System.EventHandler(this.btnConcluirEditar_Click);
@@ -112,7 +112,7 @@
             this.txtNumSerie.MaxLength = 30;
             this.txtNumSerie.Name = "txtNumSerie";
             this.txtNumSerie.Size = new System.Drawing.Size(300, 20);
-            this.txtNumSerie.TabIndex = 5;
+            this.txtNumSerie.TabIndex = 2;
             // 
             // lblCliente
             // 
@@ -131,6 +131,7 @@
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(300, 20);
             this.txtCliente.TabIndex = 7;
+            this.txtCliente.TabStop = false;
             // 
             // lblContacto
             // 
@@ -149,6 +150,7 @@
             this.txtContacto.ReadOnly = true;
             this.txtContacto.Size = new System.Drawing.Size(300, 20);
             this.txtContacto.TabIndex = 9;
+            this.txtContacto.TabStop = false;
             // 
             // lblDataEntrada
             // 
@@ -177,7 +179,7 @@
             this.txtAvaria.Multiline = true;
             this.txtAvaria.Name = "txtAvaria";
             this.txtAvaria.Size = new System.Drawing.Size(300, 103);
-            this.txtAvaria.TabIndex = 13;
+            this.txtAvaria.TabIndex = 3;
             // 
             // lblId
             // 
@@ -197,8 +199,9 @@
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(50, 25);
+            this.txtId.Size = new System.Drawing.Size(63, 25);
             this.txtId.TabIndex = 15;
+            this.txtId.TabStop = false;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // chbFinalizado
@@ -207,7 +210,7 @@
             this.chbFinalizado.Location = new System.Drawing.Point(319, 529);
             this.chbFinalizado.Name = "chbFinalizado";
             this.chbFinalizado.Size = new System.Drawing.Size(79, 17);
-            this.chbFinalizado.TabIndex = 18;
+            this.chbFinalizado.TabIndex = 4;
             this.chbFinalizado.Text = "Finalizado?";
             this.chbFinalizado.UseVisualStyleBackColor = true;
             this.chbFinalizado.CheckStateChanged += new System.EventHandler(this.chbFinalizado_CheckStateChanged);
@@ -219,13 +222,14 @@
             this.txtDtEntrada.ReadOnly = true;
             this.txtDtEntrada.Size = new System.Drawing.Size(300, 20);
             this.txtDtEntrada.TabIndex = 19;
+            this.txtDtEntrada.TabStop = false;
             // 
             // dtpReparo
             // 
             this.dtpReparo.Location = new System.Drawing.Point(320, 582);
             this.dtpReparo.Name = "dtpReparo";
             this.dtpReparo.Size = new System.Drawing.Size(144, 20);
-            this.dtpReparo.TabIndex = 20;
+            this.dtpReparo.TabIndex = 5;
             // 
             // chbTerceirizado
             // 
@@ -233,7 +237,7 @@
             this.chbTerceirizado.Location = new System.Drawing.Point(319, 624);
             this.chbTerceirizado.Name = "chbTerceirizado";
             this.chbTerceirizado.Size = new System.Drawing.Size(91, 17);
-            this.chbTerceirizado.TabIndex = 22;
+            this.chbTerceirizado.TabIndex = 7;
             this.chbTerceirizado.Text = "Por terceiros?";
             this.chbTerceirizado.UseVisualStyleBackColor = true;
             this.chbTerceirizado.CheckStateChanged += new System.EventHandler(this.chbTerceirizado_CheckStateChanged);
@@ -244,14 +248,14 @@
             this.txtReparador.MaxLength = 30;
             this.txtReparador.Name = "txtReparador";
             this.txtReparador.Size = new System.Drawing.Size(300, 20);
-            this.txtReparador.TabIndex = 23;
+            this.txtReparador.TabIndex = 8;
             // 
             // dtpEntrega
             // 
             this.dtpEntrega.Location = new System.Drawing.Point(476, 582);
             this.dtpEntrega.Name = "dtpEntrega";
             this.dtpEntrega.Size = new System.Drawing.Size(144, 20);
-            this.dtpEntrega.TabIndex = 24;
+            this.dtpEntrega.TabIndex = 6;
             // 
             // lblDtReparo
             // 
@@ -288,7 +292,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(12, 624);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(289, 73);
-            this.btnEliminar.TabIndex = 28;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -298,7 +302,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(429, 10);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(190, 25);
-            this.btnImprimir.TabIndex = 29;
+            this.btnImprimir.TabIndex = 11;
             this.btnImprimir.Text = "Imprimir Reparação";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
