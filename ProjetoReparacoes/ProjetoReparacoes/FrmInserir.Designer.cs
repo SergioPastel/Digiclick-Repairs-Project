@@ -42,6 +42,8 @@
             this.txtContacto = new System.Windows.Forms.TextBox();
             this.lblContacto = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblIdUltimo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -49,7 +51,7 @@
             this.btnInserir.Location = new System.Drawing.Point(12, 485);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(351, 85);
-            this.btnInserir.TabIndex = 0;
+            this.btnInserir.TabIndex = 7;
             this.btnInserir.Text = "Adicionar reparação";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -68,19 +70,17 @@
             // 
             this.txtDenominacao.Location = new System.Drawing.Point(12, 35);
             this.txtDenominacao.MaxLength = 30;
-            this.txtDenominacao.Multiline = true;
             this.txtDenominacao.Name = "txtDenominacao";
             this.txtDenominacao.Size = new System.Drawing.Size(351, 20);
-            this.txtDenominacao.TabIndex = 2;
+            this.txtDenominacao.TabIndex = 1;
             // 
             // txtNumSerie
             // 
             this.txtNumSerie.Location = new System.Drawing.Point(12, 95);
             this.txtNumSerie.MaxLength = 30;
-            this.txtNumSerie.Multiline = true;
             this.txtNumSerie.Name = "txtNumSerie";
             this.txtNumSerie.Size = new System.Drawing.Size(351, 20);
-            this.txtNumSerie.TabIndex = 4;
+            this.txtNumSerie.TabIndex = 2;
             // 
             // lblNumSerie
             // 
@@ -136,23 +136,22 @@
             this.dtpEntrada.Location = new System.Drawing.Point(12, 155);
             this.dtpEntrada.Name = "dtpEntrada";
             this.dtpEntrada.Size = new System.Drawing.Size(351, 20);
-            this.dtpEntrada.TabIndex = 17;
+            this.dtpEntrada.TabIndex = 3;
             // 
             // txtContacto
             // 
             this.txtContacto.Location = new System.Drawing.Point(12, 275);
             this.txtContacto.MaxLength = 30;
-            this.txtContacto.Multiline = true;
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.ReadOnly = true;
             this.txtContacto.Size = new System.Drawing.Size(351, 20);
-            this.txtContacto.TabIndex = 19;
+            this.txtContacto.TabIndex = 5;
             // 
             // lblContacto
             // 
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacto.Location = new System.Drawing.Point(16, 250);
+            this.lblContacto.Location = new System.Drawing.Point(12, 248);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(98, 24);
             this.lblContacto.TabIndex = 18;
@@ -166,14 +165,36 @@
             this.cmbCliente.MaxLength = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(351, 21);
-            this.cmbCliente.TabIndex = 20;
+            this.cmbCliente.TabIndex = 4;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(238, 8);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 24);
+            this.lblId.TabIndex = 22;
+            this.lblId.Text = "ID:";
+            // 
+            // lblIdUltimo
+            // 
+            this.lblIdUltimo.AutoSize = true;
+            this.lblIdUltimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUltimo.Location = new System.Drawing.Point(275, 8);
+            this.lblIdUltimo.Name = "lblIdUltimo";
+            this.lblIdUltimo.Size = new System.Drawing.Size(0, 24);
+            this.lblIdUltimo.TabIndex = 23;
+            this.lblIdUltimo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmInserir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 577);
+            this.Controls.Add(this.lblIdUltimo);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.lblContacto);
@@ -214,5 +235,7 @@
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblIdUltimo;
     }
 }
