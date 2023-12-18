@@ -131,15 +131,8 @@ namespace ProjetoReparacoes
                 string qry = "SELECT ISNULL(IDENT_CURRENT('ReparosAtivos'), 0);";
                 SqlCommand cmd = new SqlCommand(qry, conn);
                 int idAtivo = Convert.ToInt32(cmd.ExecuteScalar());
-
-                qry = "SELECT ISNULL(IDENT_CURRENT('ReparosConcluidos'), 0);";
-                cmd = new SqlCommand(qry, conn);
-                int idConcluido = Convert.ToInt32(cmd.ExecuteScalar());
-
-                if (idConcluido > idAtivo)
-                    lblIdUltimo.Text = (idConcluido + 1).ToString();
-                else
-                    lblIdUltimo.Text = (idAtivo + 1).ToString();
+               
+                lblIdUltimo.Text = (idAtivo + 1).ToString();
             }
             catch(SqlException ex)
             {
@@ -154,6 +147,8 @@ namespace ProjetoReparacoes
                 cmbCliente.SelectedIndex = 0;
                 dtpEntrada.Value = DateTime.Now;
                 txtDenominacao.Focus();
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
             }                        
         }
 
