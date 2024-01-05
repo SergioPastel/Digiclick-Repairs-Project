@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoReparacoes
 {
@@ -20,6 +21,7 @@ namespace ProjetoReparacoes
         public Cliente cliente;
         public string contacto;
         public DateTime dtEntrega;
+        public string reparador;
 
         // Metodos
         // Recebe uma lista com todos os reparos ativos
@@ -42,6 +44,7 @@ namespace ProjetoReparacoes
                 reparo.cliente = c.getClientWhere(conn, (int)leitor["idCliente"]);
                 reparo.contacto = (string)leitor["contacto"];
                 reparo.dtEntrega = (DateTime)leitor["dtEntrada"];
+                reparo.reparador = (string)leitor["reparador"].ToString();
                 Reparos.Add(reparo);
             }
 
@@ -67,16 +70,17 @@ namespace ProjetoReparacoes
                 r.cliente = c.getClientWhere(conn, (int)leitor["idCliente"]);
                 r.contacto = (string)leitor["contacto"];
                 r.dtEntrega = (DateTime)leitor["dtEntrada"];
+                r.reparador = (string)leitor["reparador"].ToString();
             }
 
             return r;
         }
 
         // Atualiza o reparo de id especifico
-        public void updateReparos(SqlConnection conn, int id, string desc, string num, string ava)
+        public void updateReparos(SqlConnection conn, int id, string desc, string num, string ava, string rep)
         {
             string qry = "UPDATE ReparosAtivos SET descricao ='" + desc + "', numSerie = '" + num + "', avaria = '" + ava + 
-                         "' WHERE id =" + id + ";";
+                         "', reparador = '" + rep + "' WHERE id =" + id + ";";
             SqlCommand cmd = new SqlCommand(qry, conn);
             cmd.ExecuteNonQuery();
         }

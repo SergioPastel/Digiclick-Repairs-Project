@@ -104,7 +104,7 @@ namespace ProjetoReparacoes
                                  c.id + "," +
                                  "'" + c.contacto + "','" +
                                  dtpEntrada.Value.ToString(CultureInfo.InvariantCulture).Substring(0, 10) +
-                                 "')";
+                                 "', '')";
                     cmd = new SqlCommand(qry, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Inserção finalizada com sucesso!");                    

@@ -97,6 +97,7 @@ namespace ProjetoReparacoes
                 txtCliente.Text = r.cliente.nome;
                 txtContacto.Text = r.cliente.contacto;
                 txtDtEntrada.Text = r.dtEntrega.ToString().Substring(0, 10);
+                txtReparador.Text = r.reparador.ToString();
             }
             catch (SqlException ex)
             {
@@ -117,8 +118,7 @@ namespace ProjetoReparacoes
                 dtpReparo.Show();
                 lblDtEntrega.Show();
                 dtpEntrega.Show();
-                chbTerceirizado.Show();
-                btnConcluirEditar.Text = "Concluir reparação";
+                btnConcluirEditar.Text = "Concluir Reparação";
             }
             else
             {
@@ -126,10 +126,7 @@ namespace ProjetoReparacoes
                 dtpReparo.Hide();
                 lblDtEntrega.Hide();
                 dtpEntrega.Hide();
-                chbTerceirizado.Hide();
-                lblReparador.Hide();
-                txtReparador.Hide();
-                btnConcluirEditar.Text = "Editar reparação";
+                btnConcluirEditar.Text = "Editar Reparação";
             }
         }
 
@@ -150,6 +147,7 @@ namespace ProjetoReparacoes
 
         private void btnConcluirEditar_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(btnConcluirEditar.Text);
             // Declara o Id do reparo que vai ser usado, a este é atribuido o valor selecionado na listbox
             int reparoId = (int)lstReparos.SelectedValue;
             // Se o texto do botão for de edição, remove o item selecionado do dictionary e adiciona um com as informações atualizadas
@@ -158,8 +156,9 @@ namespace ProjetoReparacoes
                 try
                 {
                     conn.Open();
-                    ReparoAtivo r = new ReparoAtivo();
-                    r.updateReparos(conn, reparoId, txtDescricao.Text, txtNumSerie.Text, txtAvaria.Text);
+                    ReparoAtivo r = new ReparoAtivo();                   
+
+                    r.updateReparos(conn, reparoId, txtDescricao.Text, txtNumSerie.Text, txtAvaria.Text, txtReparador.Text);
                     string nomeNovo = txtDescricao.Text + "(" + txtCliente.Text + ")";
                     ReparosLst.Remove(reparoId);
                     ReparosLst.Add(reparoId, nomeNovo);
@@ -195,7 +194,7 @@ namespace ProjetoReparacoes
 
                     // Usa a função concluir reparo para remover o reparo da tabela ReparosAtivos e adiciona-lo a ReparosConcluidos
                     // Remove reparo do dictionary e atualiza a lista
-                    r.updateReparos(conn, reparoId, txtDescricao.Text, txtNumSerie.Text, txtAvaria.Text);
+                    r.updateReparos(conn, reparoId, txtDescricao.Text, txtNumSerie.Text, txtAvaria.Text, txtReparador.Text);
                     r.concluirReparo(conn, r.getReparosWhere(conn, int.Parse(txtId.Text)), DateTime.Parse(txtDtEntrada.Text), dtpReparo.Value, dtpEntrega.Value, trueOrFalse, txtReparador.Text);
                     ReparosLst.Remove(reparoId);
                     lstReparos.DataSource = new BindingSource(ReparosLst, null);
@@ -242,10 +241,7 @@ namespace ProjetoReparacoes
             lblDtReparo.Hide();
             dtpReparo.Value = DateTime.Now;
             dtpReparo.Hide();
-            chbTerceirizado.Hide();
-            chbTerceirizado.CheckState = CheckState.Unchecked;
             lblReparador.Hide();
-            txtReparador.Text = "";
             txtReparador.Hide();
         }
 

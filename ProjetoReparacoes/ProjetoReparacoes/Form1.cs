@@ -43,7 +43,7 @@ namespace ProjetoReparacoes
         {
             string CriarDb = "CREATE DATABASE IF NOT EXISTS ReparacoesDB;";
             SqlCommand cmd = new SqlCommand(CriarDb, conn);
-            string usarDb = "USE ReparacoesDB; CREATE TABLE Clientes( id int NOT NULL IDENTITY (1,1), nome VARCHAR(30) NOT NULL, contacto VARCHAR(30) NOT NULL, PRIMARY KEY(id));CREATE TABLE ReparosAtivos( id INT NOT NULL IDENTITY (1,1), descricao VARCHAR(30), numSerie VARCHAR(30), avaria VARCHAR(500), idCliente INT NOT NULL FOREIGN KEY REFERENCES Clientes(id),\tcontacto VARCHAR(30), dtEntrada DATE, PRIMARY KEY(id));create table ReparosConcluidos (\tid INT NOT NULL,\tdescricao VARCHAR(30),\tnumSerie VARCHAR(30),\t\tavaria VARCHAR(500),\tidCliente INT NOT NULL,\tcontacto VARCHAR(30),\tdtEntrada DATE,\tdtReparacao DATE,\tdtEntrega DATE,\tterceirizado BIT NOT NULL,\treparador VARCHAR(30),\tPRIMARY KEY(id));";
+            string usarDb = "USE ReparacoesDB; CREATE TABLE Clientes( id int NOT NULL IDENTITY (1,1), nome VARCHAR(30) NOT NULL, contacto VARCHAR(30) NOT NULL, PRIMARY KEY(id));CREATE TABLE ReparosAtivos( id INT NOT NULL IDENTITY (1,1), descricao VARCHAR(30), numSerie VARCHAR(30), avaria VARCHAR(500), idCliente INT NOT NULL FOREIGN KEY REFERENCES Clientes(id),\tcontacto VARCHAR(30), dtEntrada DATE, reparador varchar(50), PRIMARY KEY(id));create table ReparosConcluidos (\tid INT NOT NULL,\tdescricao VARCHAR(30),\tnumSerie VARCHAR(30),\t\tavaria VARCHAR(500),\tidCliente INT NOT NULL,\tcontacto VARCHAR(30),\tdtEntrada DATE,\tdtReparacao DATE,\tdtEntrega DATE,\tterceirizado BIT NOT NULL,\treparador VARCHAR(30),\tPRIMARY KEY(id));";
             try
             {
                 conn.Open();

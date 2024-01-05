@@ -207,10 +207,10 @@
             // chbFinalizado
             // 
             this.chbFinalizado.AutoSize = true;
-            this.chbFinalizado.Location = new System.Drawing.Point(319, 529);
+            this.chbFinalizado.Location = new System.Drawing.Point(319, 624);
             this.chbFinalizado.Name = "chbFinalizado";
             this.chbFinalizado.Size = new System.Drawing.Size(79, 17);
-            this.chbFinalizado.TabIndex = 4;
+            this.chbFinalizado.TabIndex = 6;
             this.chbFinalizado.Text = "Finalizado?";
             this.chbFinalizado.UseVisualStyleBackColor = true;
             this.chbFinalizado.CheckStateChanged += new System.EventHandler(this.chbFinalizado_CheckStateChanged);
@@ -226,42 +226,42 @@
             // 
             // dtpReparo
             // 
-            this.dtpReparo.Location = new System.Drawing.Point(320, 582);
+            this.dtpReparo.Location = new System.Drawing.Point(320, 677);
             this.dtpReparo.Name = "dtpReparo";
             this.dtpReparo.Size = new System.Drawing.Size(144, 20);
-            this.dtpReparo.TabIndex = 5;
+            this.dtpReparo.TabIndex = 7;
             // 
             // chbTerceirizado
             // 
             this.chbTerceirizado.AutoSize = true;
-            this.chbTerceirizado.Location = new System.Drawing.Point(319, 624);
+            this.chbTerceirizado.Location = new System.Drawing.Point(319, 529);
             this.chbTerceirizado.Name = "chbTerceirizado";
             this.chbTerceirizado.Size = new System.Drawing.Size(91, 17);
-            this.chbTerceirizado.TabIndex = 7;
+            this.chbTerceirizado.TabIndex = 4;
             this.chbTerceirizado.Text = "Por terceiros?";
             this.chbTerceirizado.UseVisualStyleBackColor = true;
             this.chbTerceirizado.CheckStateChanged += new System.EventHandler(this.chbTerceirizado_CheckStateChanged);
             // 
             // txtReparador
             // 
-            this.txtReparador.Location = new System.Drawing.Point(319, 676);
+            this.txtReparador.Location = new System.Drawing.Point(319, 581);
             this.txtReparador.MaxLength = 30;
             this.txtReparador.Name = "txtReparador";
             this.txtReparador.Size = new System.Drawing.Size(300, 20);
-            this.txtReparador.TabIndex = 8;
+            this.txtReparador.TabIndex = 5;
             // 
             // dtpEntrega
             // 
-            this.dtpEntrega.Location = new System.Drawing.Point(476, 582);
+            this.dtpEntrega.Location = new System.Drawing.Point(476, 677);
             this.dtpEntrega.Name = "dtpEntrega";
             this.dtpEntrega.Size = new System.Drawing.Size(144, 20);
-            this.dtpEntrega.TabIndex = 6;
+            this.dtpEntrega.TabIndex = 8;
             // 
             // lblDtReparo
             // 
             this.lblDtReparo.AutoSize = true;
             this.lblDtReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDtReparo.Location = new System.Drawing.Point(319, 559);
+            this.lblDtReparo.Location = new System.Drawing.Point(319, 654);
             this.lblDtReparo.Name = "lblDtReparo";
             this.lblDtReparo.Size = new System.Drawing.Size(148, 16);
             this.lblDtReparo.TabIndex = 25;
@@ -271,7 +271,7 @@
             // 
             this.lblDtEntrega.AutoSize = true;
             this.lblDtEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDtEntrega.Location = new System.Drawing.Point(473, 559);
+            this.lblDtEntrega.Location = new System.Drawing.Point(473, 654);
             this.lblDtEntrega.Name = "lblDtEntrega";
             this.lblDtEntrega.Size = new System.Drawing.Size(124, 16);
             this.lblDtEntrega.TabIndex = 26;
@@ -281,7 +281,7 @@
             // 
             this.lblReparador.AutoSize = true;
             this.lblReparador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReparador.Location = new System.Drawing.Point(318, 651);
+            this.lblReparador.Location = new System.Drawing.Point(318, 556);
             this.lblReparador.Name = "lblReparador";
             this.lblReparador.Size = new System.Drawing.Size(114, 24);
             this.lblReparador.TabIndex = 27;
