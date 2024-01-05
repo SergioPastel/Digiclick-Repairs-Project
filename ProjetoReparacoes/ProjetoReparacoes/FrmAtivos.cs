@@ -98,6 +98,11 @@ namespace ProjetoReparacoes
                 txtContacto.Text = r.cliente.contacto;
                 txtDtEntrada.Text = r.dtEntrega.ToString().Substring(0, 10);
                 txtReparador.Text = r.reparador.ToString();
+
+                if (txtReparador.Text.Equals(""))
+                    chbTerceirizado.Checked = false;
+                else
+                    chbTerceirizado.Checked = true;
             }
             catch (SqlException ex)
             {
