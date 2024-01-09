@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 
 namespace ProjetoReparacoes
 {
+    // This is the public version.
     public partial class Form1 : Form
     {
         const string str = "Server=localhost;Trusted_Connection=True;";
