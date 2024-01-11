@@ -30,3 +30,4 @@ C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoR
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\bin\Debug\ProjetoReparacoes.application
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.exe.manifest
 C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.application
+C:\Users\Digiclick-Frente\Documents\GitHub\Reparacoes\ProjetoReparacoes\ProjetoReparacoes\obj\Debug\ProjetoReparacoes.FormDb.resources

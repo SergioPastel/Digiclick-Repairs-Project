@@ -14,41 +14,56 @@ namespace ProjetoReparacoes
 {
     public partial class frmInserir : Form
     {
-        // Codigo da conexão da base de dados
-        const string str = "Server=localhost;Database=ReparacoesDB;Trusted_Connection=True;";
-        SqlConnection conn = new SqlConnection(str);
+        SqlConnection conn = new SqlConnection();
         // List de clientes que vai ser usada para conseguir o contacto
         List<Cliente> Lista = new List<Cliente>();
         Dictionary<int, string> Clientes = new Dictionary<int, string>();
+
         public frmInserir()
         {
             InitializeComponent();
-            // Cria um cliente novo para usar o "GetClients" e para adicionar um cliente vazio no indice 0
-            Cliente c = new Cliente();                     
-            try
+            
+        }
+        public frmInserir(string server, string user, string pass, bool log)
+        {
+            string str = "Server= " + server + "; Database= ReparacoesDB; User=" + user + "; Password= " + pass + ";";
+            conn.ConnectionString = str;
+            if (log == false)
             {
-                conn.Open();
-                // Adiciona um Cliente vazio no indice 0
-                Clientes.Add(0, "Insira/Escolha um Cliente");
-                // Para cada Cliente na base de dados, é adicionado a lista e ao dictionary
-                foreach (Cliente cliente in c.getClients(conn))
+                this.Close();
+                frmInserir frm = new frmInserir();
+                frm.Show();
+            }
+            else
+            {
+                InitializeComponent();
+                // Cria um cliente novo para usar o "GetClients" e para adicionar um cliente vazio no indice 0
+                Cliente c = new Cliente();
+                try
                 {
-                    Lista.Add(cliente);                    
-                    Clientes.Add(cliente.id, cliente.nome);
+                    conn.Open();
+                    // Adiciona um Cliente vazio no indice 0
+                    Clientes.Add(0, "Insira/Escolha um Cliente");
+                    // Para cada Cliente na base de dados, é adicionado a lista e ao dictionary
+                    foreach (Cliente cliente in c.getClients(conn))
+                    {
+                        Lista.Add(cliente);
+                        Clientes.Add(cliente.id, cliente.nome);
+                    }
+                    // Fonte de dados da combobox se torna o dictionary de clientes
+                    cmbCliente.DataSource = new BindingSource(Clientes, null);
+                    cmbCliente.DisplayMember = "Value";
+                    cmbCliente.ValueMember = "Key";
                 }
-                // Fonte de dados da combobox se torna o dictionary de clientes
-                cmbCliente.DataSource = new BindingSource(Clientes, null);
-                cmbCliente.DisplayMember = "Value";
-                cmbCliente.ValueMember = "Key";
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {               
-                conn.Close();
-                ClearBoxes();
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                    ClearBoxes();
+                }
             }
         }
         
